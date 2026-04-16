@@ -9,14 +9,18 @@ export default function Featured() {
         />
       </div>
       <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
-        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Почему выбирают нас</h3>
+        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Brawl Stars — от Supercell</h3>
         <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-          Никаких платных подписок, скрытых условий и вирусов. Только честные игры —
-          бесплатно, быстро и безопасно прямо в твоих руках.
+          Более 70 бравлеров, десятки режимов и постоянные обновления. Сражайся с друзьями или против всего мира — совершенно бесплатно.
         </p>
-        <button className="bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
-          Скачать игры
-        </button>
+        <a
+          href="https://supercell.com/en/games/brawlstars/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black w-fit uppercase tracking-wide"
+        >
+          Скачать Brawl Stars
+        </a>
       </div>
     </div>
   );

@@ -27,14 +27,19 @@ export default function Hero() {
 
       <div className="relative z-10 text-center text-white">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-          ИГРАЙ
+          BRAWL STARS
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90 mb-10">
-          Бесплатные игры без регистрации и СМС. Скачивай и запускай за минуту.
+          Эпические битвы 3 на 3, королевская битва и куча режимов. Бесплатно — прямо сейчас.
         </p>
-        <button className="bg-white text-black px-8 py-3 uppercase tracking-widest text-sm font-bold hover:bg-neutral-200 transition-colors duration-300 cursor-pointer">
+        <a
+          href="https://supercell.com/en/games/brawlstars/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-white text-black px-8 py-3 uppercase tracking-widest text-sm font-bold hover:bg-neutral-200 transition-colors duration-300"
+        >
           Скачать бесплатно
-        </button>
+        </a>
       </div>
     </div>
   );

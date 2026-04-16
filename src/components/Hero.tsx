@@ -1,6 +1,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import { useStoreLink, useStoreName } from "@/hooks/useStoreLink";
+import ShareButton from "@/components/ShareButton";
 
 const floatingEmojis = [
   { emoji: "💥", top: "10%", left: "5%", delay: 0 },
@@ -69,19 +70,22 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        <a
-          href={storeLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-8 py-4 font-bold rounded-2xl transition-all duration-300 hover:scale-105"
-          style={{ background: "linear-gradient(135deg, #ff6b00, #ff9500)", boxShadow: "0 8px 32px rgba(255,107,0,0.5)" }}
-        >
-          <span className="text-2xl">{store.emoji}</span>
-          <div className="text-left">
-            <div className="text-xs opacity-80 uppercase tracking-wide">Скачать в</div>
-            <div className="text-base font-black">{store.name}</div>
-          </div>
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={storeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 font-bold rounded-2xl transition-all duration-300 hover:scale-105"
+            style={{ background: "linear-gradient(135deg, #ff6b00, #ff9500)", boxShadow: "0 8px 32px rgba(255,107,0,0.5)" }}
+          >
+            <span className="text-2xl">{store.emoji}</span>
+            <div className="text-left">
+              <div className="text-xs opacity-80 uppercase tracking-wide">Скачать в</div>
+              <div className="text-base font-black">{store.name}</div>
+            </div>
+          </a>
+          <ShareButton />
+        </div>
       </div>
     </div>
   );

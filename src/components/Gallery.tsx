@@ -1,18 +1,15 @@
 const images = [
   {
-    src: "https://cdn.brawlstars.com/brawlstars-assets/screenshot-1.jpg",
-    fallback: "https://static.wikia.nocookie.net/brawlstars/images/0/0e/Brawl_Stars_gameplay.jpg",
-    alt: "Brawl Stars gameplay",
+    src: "https://images.igdb.com/igdb/image/upload/t_screenshot_big/sc5vnt.jpg",
+    alt: "Brawl Stars gameplay 1",
   },
   {
-    src: "https://cdn.brawlstars.com/brawlstars-assets/screenshot-2.jpg",
-    fallback: "https://static.wikia.nocookie.net/brawlstars/images/b/b3/Brawl_Stars_brawlers.jpg",
-    alt: "Brawl Stars brawlers",
+    src: "https://images.igdb.com/igdb/image/upload/t_screenshot_big/sc5vnu.jpg",
+    alt: "Brawl Stars gameplay 2",
   },
   {
-    src: "https://cdn.brawlstars.com/brawlstars-assets/screenshot-3.jpg",
-    fallback: "https://static.wikia.nocookie.net/brawlstars/images/4/4f/Brawl_Stars_map.jpg",
-    alt: "Brawl Stars map",
+    src: "https://images.igdb.com/igdb/image/upload/t_screenshot_big/sc5vnv.jpg",
+    alt: "Brawl Stars gameplay 3",
   },
 ];
 
@@ -22,13 +19,17 @@ export default function Gallery() {
       <h3 className="uppercase text-neutral-400 text-sm tracking-widest mb-8 text-center">Скриншоты из игры</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
         {images.map((img, i) => (
-          <div key={i} className="aspect-video overflow-hidden">
+          <div key={i} className="aspect-video overflow-hidden bg-neutral-800 flex items-center justify-center">
             <img
               src={img.src}
               alt={img.alt}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = img.fallback;
+                const target = e.target as HTMLImageElement;
+                target.style.display = "none";
+                if (target.parentElement) {
+                  target.parentElement.innerHTML = `<span style="font-size:80px">🎮</span>`;
+                }
               }}
             />
           </div>

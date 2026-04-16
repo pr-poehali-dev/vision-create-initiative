@@ -20,18 +20,21 @@ export default function Hero() {
       >
         <img
           src="/images/mountain-landscape.jpg"
-          alt="Mountain landscape"
+          alt="Gaming landscape"
           className="w-full h-full object-cover"
         />
       </motion.div>
 
       <div className="relative z-10 text-center text-white">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-          ОТКРОЙ
+          ИГРАЙ
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
-          Исследуй границы дизайна с иммерсивным параллакс-эффектом
+        <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90 mb-10">
+          Бесплатные игры без регистрации и СМС. Скачивай и запускай за минуту.
         </p>
+        <button className="bg-white text-black px-8 py-3 uppercase tracking-widest text-sm font-bold hover:bg-neutral-200 transition-colors duration-300 cursor-pointer">
+          Скачать бесплатно
+        </button>
       </div>
     </div>
   );

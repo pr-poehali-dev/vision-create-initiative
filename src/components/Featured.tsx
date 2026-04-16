@@ -1,8 +1,15 @@
 export default function Featured() {
   return (
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0 bg-white">
-      <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2 bg-neutral-100 flex items-center justify-center">
-        <span className="text-[120px]">🎮</span>
+      <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
+        <img
+          src="https://cdn.brawlstars.com/brawlstars-assets/hero-keyart.jpg"
+          alt="Brawl Stars"
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "https://upload.wikimedia.org/wikipedia/en/1/11/Brawl_Stars_logo.png";
+          }}
+        />
       </div>
       <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
         <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Brawl Stars — от Supercell</h3>
